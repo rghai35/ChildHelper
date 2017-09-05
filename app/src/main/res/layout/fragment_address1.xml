@@ -1,0 +1,134 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rohitghai.childtracker.Address1"
+    android:background="@drawable/address1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <EditText
+            android:id="@+id/address1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:hint="Address (Parent's Address)"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:padding="6dp"
+            android:background="@android:color/transparent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffd7ff"/>
+
+
+        <EditText
+            android:id="@+id/city1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_marginTop="20dp"
+            android:hint="City"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:padding="6dp"
+            android:background="@android:color/transparent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffd7ff"/>
+
+
+         <EditText
+            android:id="@+id/state1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_marginTop="20dp"
+            android:hint="State"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:padding="6dp"
+            android:background="@android:color/transparent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffd7ff"/>
+
+        <EditText
+            android:id="@+id/mobile1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Mobile No."
+            android:layout_marginTop="20dp"
+            android:inputType="phone"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:padding="6dp"
+            android:background="@android:color/transparent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffd7ff"/>
+
+         <Button
+            android:id="@+id/fetch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fetch Address"
+            android:layout_marginTop="25dp"
+            android:textAllCaps="false"
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:padding="8dp"
+            android:background="@drawable/address1_buttons"
+            style="@style/TextAppearance.AppCompat.Body1"/>
+
+        <Button
+            android:id="@+id/submit1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_marginTop="25dp"
+            android:textAllCaps="false"
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:padding="8dp"
+            android:background="@drawable/address1_buttons"
+            style="@style/TextAppearance.AppCompat.Body1"/>
+
+         <Button
+            android:id="@+id/edit1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:layout_marginTop="25dp"
+            android:textAllCaps="false"
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:padding="8dp"
+            android:background="@drawable/address1_buttons"
+            style="@style/TextAppearance.AppCompat.Body1"/>
+
+        </LinearLayout>
+</ScrollView>

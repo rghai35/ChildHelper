@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registrationbackground">
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rohitghai.childtracker.RegisterActivity"
+    android:orientation="vertical"
+    android:padding="25dp">
+
+    <TextView
+        android:id="@+id/registerhere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please Register Here"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:textColorHint="@color/white"
+        android:maxLines="1"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:padding="6dp"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/name"
+        android:background="@android:color/transparent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffd1d1"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Email"
+        android:textColorHint="@color/white"
+        android:maxLines="1"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        android:inputType="textEmailAddress"
+        android:padding="6dp"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/email"
+        android:background="@android:color/transparent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffd1d1"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:textColorHint="@color/white"
+        android:maxLines="1"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        android:inputType="textPassword"
+        android:padding="6dp"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/password"
+        android:background="@android:color/transparent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffd1d1"/>
+
+    <EditText
+        android:id="@+id/retypepassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Retype Password"
+        android:textColorHint="@color/white"
+        android:maxLines="1"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        android:inputType="textPassword"
+        android:padding="6dp"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/password"
+        android:background="@android:color/transparent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffd1d1"/>
+
+    <EditText
+        android:id="@+id/mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Mobile No."
+        android:textColorHint="@color/white"
+        android:maxLines="1"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        android:padding="6dp"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/mobile"
+        android:background="@android:color/transparent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffd1d1"/>
+
+
+    <EditText
+        android:id="@+id/childname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Child Name"
+        android:textColorHint="@color/white"
+        android:maxLines="1"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        android:padding="6dp"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/child"
+        android:background="@android:color/transparent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffd1d1"/>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_marginTop="35dp"
+        android:textAllCaps="false"
+        android:textStyle="normal"
+        android:clickable="true"
+        android:textSize="22dp"
+        android:textColor="#990000"
+        android:padding="8dp"
+        android:background="@drawable/background_login"
+        style="@style/TextAppearance.AppCompat.Body1" />
+            <!-- Same background xml file as of login button on activity_login.xml -->
+
+</LinearLayout>
+    </ScrollView>

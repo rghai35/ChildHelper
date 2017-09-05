@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rohitghai.childtracker.InformationActivity"
+    android:background="@drawable/heplbackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="35dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="Child Helper \n (Speed Tracker)"
+            android:layout_marginBottom="5dp"/>
+
+
+        <TextView
+            android:id="@+id/childhelper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Child Helper:"
+            android:textColor="#0000ff"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/details1"
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:textAlignment="textStart"
+            android:text=""
+            android:textColor="#0000ff"
+            android:textSize="15dp"
+            android:layout_marginBottom="15dp"/>
+
+
+        <TextView
+            android:id="@+id/speedtracker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Speed Tracker:"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginBottom="5dp"/>
+
+
+        <TextView
+            android:id="@+id/details2"
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:textAlignment="textStart"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="15dp"/>
+
+
+</LinearLayout>
+    </ScrollView>
