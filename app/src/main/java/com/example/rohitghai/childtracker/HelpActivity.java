@@ -50,7 +50,7 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
     SharedPreferences preferencesAddress2;
     SharedPreferences preferencesAddress3;
 
-    String message;
+    String EditTextMessage;
     String messageSend;
     String childName;
 
@@ -166,47 +166,54 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view)
     {
-        message = tvChildLocation.getText().toString().trim();
+        EditTextMessage = etMessage.getText().toString().trim();
 
-        double parentLong = Double.valueOf(preferencesAddress1.getString("Longitude1",""));
         double parentLatd = Double.valueOf(preferencesAddress1.getString("Latitude1",""));
-        double relative1Long = Double.valueOf(preferencesAddress2.getString("Longitude2",""));
+        double parentLong = Double.valueOf(preferencesAddress1.getString("Longitude1",""));
         double relative1Latd = Double.valueOf(preferencesAddress2.getString("Latitude2",""));
-        double relative2Long = Double.valueOf(preferencesAddress3.getString("Longitude3",""));
+        double relative1Long = Double.valueOf(preferencesAddress2.getString("Longitude2",""));
         double relative2Latd = Double.valueOf(preferencesAddress3.getString("Latitude3",""));
+        double relative2Long = Double.valueOf(preferencesAddress3.getString("Longitude3",""));
 
-        Toast.makeText(this, parentLong + " " + parentLatd + " " + relative1Long + " " + relative1Latd + " " + relative2Latd + " " + relative2Long, Toast.LENGTH_SHORT).show();
+        String parentMobile = preferencesAddress1.getString("keyMobile1","");
+        String relative1Mobile = preferencesAddress2.getString("keyMobile2","");
+        String relative2Mobile = preferencesAddress3.getString("keyMobile3","");
+
+        Toast.makeText(this, parentLatd + " " + parentLong + " " + relative1Latd + " " + relative1Long + " " + relative2Latd + " " + relative2Long + " " + parentMobile + " " + relative1Mobile + " " + relative2Mobile, Toast.LENGTH_LONG).show();
 
         //FETCH LONGITUDE, LATITUDE, MOBILE FROM ADDRESS1,2,3 ....
 
+        String isMessage;
 
-       /* if(cbParents.isChecked())
+        if(EditTextMessage.isEmpty())
         {
-            messageSend = "Your Child, " + childName + " Is In Trouble. He Is Currently At Location - " + buffer.toString();
-
-            if(!message.isEmpty())
-            {
-                String isMessage = messageSend + "Message Is: " + message;
-            }
-
-            //sm.sendTextMessage(mobile, null, isMessage, null, null);
-            //Toast.makeText(HelpActivity.this, "Your Details Has Been Sent To Your Parents. You Will Be Helped Soon", Toast.LENGTH_SHORT).show();
-
-
+            isMessage = "Message: No Message For You";
         }
 
         else
         {
-            messageSend = childName + " Is In Trouble. He Is Currently At Location - " + buffer.toString();
+            isMessage = "Message: " + EditTextMessage;
+        }
 
-            if(!message.isEmpty())
-            {
-                String isMessage = messageSend + "Message Is: " + message;
-            }
+
+        if(cbParents.isChecked())
+        {
+            messageSend = "Your Child, " + childName + " Is In Trouble. He Is Currently At Location - " + buffer.toString() + isMessage;
+
+            Toast.makeText(this, messageSend, Toast.LENGTH_LONG).show();
+            //sm.sendTextMessage(mobile, null, isMessage, null, null);
+            //Toast.makeText(HelpActivity.this, "Your Details Has Been Sent To Your Parents. You Will Be Helped Soon", Toast.LENGTH_SHORT).show();
+        }
+
+        else
+        {
+            messageSend = childName + " Is In Trouble. He Is Currently At Location - " + buffer.toString() + isMessage;
+
+            Toast.makeText(this, messageSend, Toast.LENGTH_LONG).show();
 
             //sm.sendTextMessage(mobile, null, isMessage, null, null);
             //Toast.makeText(HelpActivity.this, "Your Details Has Been Sent To Your Nearby Relatives. You Will Be Helped Soon", Toast.LENGTH_SHORT).show();
 
-        }*/
+        }
     }
 }

@@ -62,13 +62,12 @@ public class Address1 extends Fragment implements View.OnClickListener, Location
     SharedPreferences preferencesAddress1;
     SharedPreferences.Editor editor;
 
-    public Address1()
-    {
-
-    }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
+    {
+        super.onViewCreated(view, savedInstanceState);
+
         etAddress1 = (EditText) view.findViewById(R.id.address1);
         etCity1 = (EditText) view.findViewById(R.id.city1);
         etState1 = (EditText) view.findViewById(R.id.state1);
@@ -220,6 +219,8 @@ public class Address1 extends Fragment implements View.OnClickListener, Location
 
         if(id == R.id.edit1)
         {
+            FetchAddress1();
+
             etAddress1.setFocusable(true);
             etAddress1.setFocusableInTouchMode(true);
             etAddress1.setClickable(true);
@@ -258,6 +259,7 @@ public class Address1 extends Fragment implements View.OnClickListener, Location
         {
             lm1.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5, 5, Address1.this);
             pd1.show();
+            pd1.setCancelable(false);
         }
     }
 

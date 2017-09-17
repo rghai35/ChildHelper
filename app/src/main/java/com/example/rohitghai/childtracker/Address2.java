@@ -222,6 +222,8 @@ public class Address2 extends Fragment implements View.OnClickListener, Location
 
         if(id == R.id.edit2)
         {
+            FetchAddress2();
+
             etAddress2.setFocusable(true);
             etAddress2.setFocusableInTouchMode(true);
             etAddress2.setClickable(true);
@@ -260,6 +262,7 @@ public class Address2 extends Fragment implements View.OnClickListener, Location
         {
             lm2.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5, 5, Address2.this);
             pd2.show();
+            pd2.setCancelable(false);
         }
     }
 

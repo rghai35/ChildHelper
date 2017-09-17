@@ -220,6 +220,9 @@ public class Address3 extends Fragment implements View.OnClickListener, Location
 
         if(id == R.id.edit3)
         {
+
+            FetchAddress3();
+
             etAddress3.setFocusable(true);
             etAddress3.setFocusableInTouchMode(true);
             etAddress3.setClickable(true);
@@ -258,6 +261,7 @@ public class Address3 extends Fragment implements View.OnClickListener, Location
         {
             lm3.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5, 5, Address3.this);
             pd3.show();
+            pd3.setCancelable(false);
         }
     }
 
